@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- 必须的 meta 标签 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap 的 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="icon" 
+      type="image/png" 
+      href="1.png" />
+    <title>THE BEST MAN</title>
+    <meta name="theme-color" content="#563d7c">
+    <style>
+      body{
+        /* background-color:#333333; */
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+      h1{
+        font-size: 24px;
+        line-height: 40px;
+        margin: 5px auto 15px auto;
+        display: block;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+      }
+      div.container{
+        width: 50%;
+      }
+      img#main{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: block;
+        max-width: 100%;
+      }
+      ul.list-unstyled{
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        /* padding-left: 5px; */
+        /* border-left: 3px solid grey; */
+      }
+      @media screen and (max-width:600px) {
+        div.container{
+          width: 100%;
+          /* margin-left: 5px;
+          margin-right: 5px; */
+          padding: 5px;
+        }
+      }
+      .qrcode_button {
+        background: none;
+        margin: 0px;
+        padding: 0px;
+        border-style: none none dashed none;
+        cursor: pointer;
+      }
+      .qrcode {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 1);
+        z-index: 9999;
+        display: none;
+      }
+      .qrcode img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        text-align: center;
+        width: 480px;
+        height: auto;
+        margin: auto;
+        z-index: 1;
+        display: block;
+      }
+      @media screen and (max-width:480px) {
+        .qrcode img{          
+          width: 100%;
+        }
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">世界最优秀女性奖揭晓！</h1>
+      <img src="certificate2022.png" id="main" alt="最优秀女性爱周凯！">
+      <p>北京时间4月1日下午6时许，2022年世界最优秀女性奖揭晓。经联合国安理会两百多个国家多轮投票，<button class="qrcode_button">邹家璐</button>高票当选。</p>
+      <p>最优秀女性奖是世界各国人民为激励女性变得更优秀而于2022年设立的奖项，每年授予一位女性。<button class="qrcode_button">邹家璐</button>因其优良的品德以及卓越的能力，毫无悬念的获得首届“世界最优秀女性”称号。</p>
+      <div class="qrcode" id="qrcode">
+        <img id="image" width="100%" height="100%" src="qrcode.jpg">
+      </div>
+      <ul class="list-unstyled">
+          <li class="media">
+            <img src="trump.jpeg" height="64" width="64" class="mr-3" alt="...">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">Donald Trump</h5>
+              <p>Nobody knows the best woman better than I do. It's obvious Zou Jialu is the best woman, maybe in the history of the world.</p>
+            </div>
+          </li>
+          <li class="media">
+              <img src="thebestman.jpg" height="64" width="64" class="mr-3" alt="...">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">世界最优秀男人</h5>
+                <p>一个优秀的男人背后往往都有一个优秀的女人。世界最优秀男人的女朋友当然也是世界最优秀女人。</p>
+              </div>
+          </li>
+          <li class="media">
+              <img src="luxun.jpg" height="64" width="64" class="mr-3" alt="...">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">鲁迅</h5>
+                <p>最优秀女性称号邹家璐当之无愧。娶邹家璐对一个男人来说是人生中最幸福的事。这句话我真的说过！</p>
+              </div>
+          </li>
+      </ul>
+    </div>
+    <!-- JavaScript 文件是可选的。从以下两种建议中选择一个即可！ -->
+
+    <!-- 选项 1：jQuery 和 Bootstrap 集成包（集成了 Popper） -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-LCPyFKQyML7mqtS+4XytolfqyqSlcbB3bvDuH9vX2sdQMxRonb/M3b9EmhCNNNrV" crossorigin="anonymous"></script> -->
+
+    <!-- 选项 2：Popper 和 Bootstrap 的 JS 插件各自独立 -->
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-gRC4eoaRyQ8xv2X6Mnf+eOIrtON3wId3dAkwO0HQX26OrFBoLpjX/XWOJacSiZhL" crossorigin="anonymous"></script> -->
+    <script>
+      $(function() {
+          $(".qrcode_button").click(function() {
+              // $("#qrcode").fadeIn("fast");
+              $("#qrcode").show();
+          });
+
+          $(".qrcode").click(function() {
+              // $('#' + $(this)[0].id).fadeOut("slow");
+              $('#' + $(this)[0].id).hide();
+          })
+          
+      });
+    </script>
+  </body>
+</html>
